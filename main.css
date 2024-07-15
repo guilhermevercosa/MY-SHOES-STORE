@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+form input,
+button {
+    border-radius: 5px;
+    border-color: #0000007a;
+    border-style: ridge;
+    background-color: #cccccc67;
+}
+
+form button {
+    cursor: pointer;
+}
+
+.container img {
+    width: 25%;
+    max-width: 100%;
+    margin-block: -10px;
+    margin-top: 7px;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 6px 2px 5px 3px #ccc;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px #ccc;
+    left: 0;
+    top: 55px;
+    width: 100%;
+}
+
+.menu > li {
+    float: left;
+    list-style: none;
+    padding: 16px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    position: relative;
+    left: 32%;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.clear {
+    clear: both;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:hover {
+    border-color: black;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+.preco {
+    margin-top: 16px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #979797;
+}
+
+.produtos-destaque,
+.produtos-promocao {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.produtos-destaque li,
+.produtos-promocao li {
+    list-style: none;
+    max-width: 30%;
+}
+
+.produtos-destaque img,
+.produtos-promocao img {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 12px;
+}
+
+.produtos-destaque li h3,
+.produtos-promocao li h3 {
+    margin: 16px 0;
+}
+
+.destaque h2,
+.promocao h2 {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+    margin-top: 60px;
+}
+
+.container-flex{
+    display: flex;
+}
+
+#sobre-a-loja img{
+    max-width: 400px;
+    margin-right: 24px;
+    border-radius: 12px;
+}
+
+#sobre-a-loja{
+    margin-top: 60px;
+}
+
+footer {
+    background: #ccc;
+    border-radius: 8px;
+    margin-top: 50px;
+    padding: 16px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 30%;
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: 100%;
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu > li {
+        float: none;
+        list-style: none;
+        padding: 16px;
+        border-bottom: 4px solid transparent;
+        cursor: pointer;
+        font-weight: bolder;
+        text-transform: uppercase;
+        max-width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    form input {
+        width: 90%;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    form button {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .submenu {
+        position: relative;
+        top: 0;
+    }
+
+    .produtos-destaque li,
+    .produtos-promocao li {
+        max-width: 100%;
+    
+    }
+    #sobre-a-loja {
+        grid-template-columns: 1fr;
+    }
+
+    #sobre-a-loja img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    #sobre-a-loja h2 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    footer p {
+        margin-left: 0;
+    }
+}
